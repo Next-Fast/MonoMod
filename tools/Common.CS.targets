@@ -125,30 +125,6 @@
         <PackageReference Include="System.Reflection.Emit.ILGeneration" Version="4.7.0" />
       </ItemGroup>
     </When>
-    
-    <When Condition="'$(TargetFramework)' != 'net35'">
-      <!-- .NET Framework 4.0+ -->
-      <PropertyGroup>
-        <DefineConstants>NETFRAMEWORK4;$(DefineConstants)</DefineConstants>
-        <DefineConstants>CECIL0_11;$(DefineConstants)</DefineConstants>
-        <CecilVersion Condition="'$(CecilVersion)' == ''">$(NewCecilVersion)</CecilVersion>
-      </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="System" />
-      </ItemGroup>
-    </When>
-    
-    <When Condition="'$(TargetFramework)' == 'net35'">
-      <!-- .NET Framework 3.5 -->
-      <PropertyGroup>
-        <DefineConstants>NETFRAMEWORK3;$(DefineConstants)</DefineConstants>
-        <DefineConstants>CECIL0_10;$(DefineConstants)</DefineConstants>
-        <CecilVersion Condition="'$(CecilVersion)' == ''">$(OldCecilVersion)</CecilVersion>
-      </PropertyGroup>
-      <ItemGroup>
-        <Reference Include="System" />
-      </ItemGroup>
-    </When>
   </Choose>
 
   <ItemGroup>

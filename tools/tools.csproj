@@ -1,2 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<Project Sdk="Microsoft.Build.NoTargets" />
+<Project Sdk="Microsoft.Build.NoTargets">
+  <ItemGroup>
+    <PackageReference Update="NuGetizer" Version="1.2.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+</Project>

@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="ClangSharp" Version="18.1.0.1" />
+    <PackageReference Include="ClangSharp" Version="18.1.0.3" />
   </ItemGroup>
 
 </Project>
