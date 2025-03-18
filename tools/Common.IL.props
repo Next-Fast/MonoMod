@@ -14,7 +14,9 @@
     <ProduceReferenceAssembly>false</ProduceReferenceAssembly>
     <IsNetCoreOrStandard>false</IsNetCoreOrStandard>
     
+    <!-- If we're building for .NET 3.5, we need to manually set the version string so the runtime will load it. -->
     <RuntimeMetadataVersion>v4.0.30319</RuntimeMetadataVersion>
+    <RuntimeMetadataVersion Condition="'$(TargetFramework)' == 'net35'">v2.0.50727</RuntimeMetadataVersion>
   </PropertyGroup>
   
   <PropertyGroup Condition="$([MSBuild]::GetTargetFrameworkIdentifier('$(TargetFramework)')) == '.NETCoreApp'">
@@ -27,4 +29,9 @@
     <CoreAssembly>netstandard</CoreAssembly>
     <IsNetCoreOrStandard>true</IsNetCoreOrStandard>
   </PropertyGroup>
+  
+  <PropertyGroup Condition="$([MSBuild]::GetTargetFrameworkIdentifier('$(TargetFramework)')) == '.NETFramework'">
+    <CoreAssembly>mscorlib</CoreAssembly>
+  </PropertyGroup>
+
 </Project>

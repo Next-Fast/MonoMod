@@ -32,7 +32,7 @@
       "enumSortOrder": "declaringOrder",
       "noRestore": true,
       "properties": {
-        "TargetFramework": "net9.0"
+        "TargetFramework": "net8.0"
       }
     }
   ],

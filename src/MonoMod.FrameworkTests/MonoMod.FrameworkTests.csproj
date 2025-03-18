@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <IsPackable>false</IsPackable>
-    <TargetFrameworks>$(TargetFrameworks);</TargetFrameworks>
+    <TargetFrameworks>$(TargetFrameworks);netcoreapp3.1</TargetFrameworks>
 
     <NoWarn>$(NoWarn);CA1303</NoWarn>
   </PropertyGroup>
